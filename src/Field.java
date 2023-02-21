@@ -1,28 +1,27 @@
 public class Field {
-    private static final int WIDTH = 3;
-    private static final int HEIGHT = 3;
-    private final Cell[][] gameField = new Cell[WIDTH][HEIGHT];
+    private static final int N = 3;
+    private final Cell[][] gameField = new Cell[N][N];
 
     public Cell[][] getGameField() {
         return gameField;
     }
 
     public void initialiseField() {
-        for (int j = 0; j < HEIGHT; j++) {
-            for (int i = 0; i < WIDTH; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int i = 0; i < N; i++) {
                 gameField[i][j] = Cell.EMPTY;
             }
         }
     }
 
     public void printField() {
-        System.out.println("     1   2   3");
-        for (int j = 0; j < HEIGHT; j++) {
-            System.out.print(j+1 + "   ");
-            for (int i = 0; i < WIDTH; i++) {
-                System.out.print(getSymbol(gameField[i][j]) + " ");
+        System.out.println("  | 0 | 1 | 2 |" + "\n--+---+---+---+");
+        for (int j = 0; j < N; j++) {
+            System.out.print(j + " | ");
+            for (int i = 0; i < N; i++) {
+                System.out.print(getSymbol(gameField[i][j]) + " | ");
             }
-            System.out.println("\n");
+            System.out.println("\n--+---+---+---+");
         }
     }
 
@@ -31,7 +30,7 @@ public class Field {
     }
 
     public boolean isValidCell(int x, int y){
-        if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT || gameField[x][y] != Cell.EMPTY) {
+        if (x < 0 || x >= N || y < 0 || y >= N || gameField[x][y] != Cell.EMPTY) {
             System.out.println("Your coordinates are incorrect!");
             return false;
         }
@@ -53,7 +52,7 @@ public class Field {
     }
 
     private boolean checkWin(Cell value){
-        for (int i = 0; i < WIDTH; i++){
+        for (int i = 0; i < N; i++){
             if ((gameField[i][0] == value && gameField[i][1] == value && gameField[i][2] == value) ||
                     (gameField[0][i] == value && gameField[1][i] == value && gameField[2][i] == value)){
                 return true;
@@ -64,8 +63,8 @@ public class Field {
     }
 
     private boolean isFullField() {
-        for (int j = 0; j < HEIGHT; j++) {
-            for (int i = 0; i < WIDTH; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int i = 0; i < N; i++) {
                 if (gameField[i][j] == Cell.EMPTY) {
                     return false;
                 }
@@ -76,10 +75,10 @@ public class Field {
 
     private String getSymbol(Cell value) {
         if (value == Cell.EMPTY) {
-            return "[  ]";
+            return "-";
         } else if (value == Cell.X) {
-            return " X ";
+            return "X";
         }
-        return " O ";
+        return "O";
     }
 }

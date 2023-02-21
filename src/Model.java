@@ -26,6 +26,7 @@ public class Model {
             if (gameField.checkWin()){
                 break;
             }
+            System.out.println("\n Another player makes turn \n");
             makeTurn(Cell.O);
             gameField.printField();
         }
@@ -40,6 +41,7 @@ public class Model {
             if (gameField.checkWin()){
                 break;
             }
+            System.out.println("\n AI makes turn \n");
             ai.makeTurn(gameField.getGameField());
             gameField.printField();
         }
@@ -49,8 +51,8 @@ public class Model {
         int x, y;
         do {
             System.out.println("Enter the coordinates of your next Turn (X and Y)");
-            x = SCANNER.nextInt() - 1;
-            y = SCANNER.nextInt() - 1;
+            x = SCANNER.nextInt();
+            y = SCANNER.nextInt();
         } while (!gameField.isValidCell(x, y));
         gameField.setFieldValue(x, y, value);
         gameField.printField();
