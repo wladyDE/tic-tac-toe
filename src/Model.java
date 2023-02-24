@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Model {
     private static final Scanner SCANNER = new Scanner(System.in);
 
-    private final Field gameField = new Field();
+    private final Board BOARD = new Board();
+
+    private final BoardState BOARD_STATE = new BoardState();
 
     public void startGame() {
         System.out.println("Choose your game: press 1 to play with AI and 2 to play with another Player");
@@ -19,32 +21,32 @@ public class Model {
     }
 
     private void playAgainstPlayer() {
-        gameField.initialiseField();
-        gameField.printField();
-        while (!gameField.checkWin()) {
+        BOARD.printBoard();
+        while (BOARD_STATE.checkWin(BOARD.getGameBoard()) == 0) {
             makeTurn(Cell.X);
-            if (gameField.checkWin()){
+            if (BOARD_STATE.checkWin(BOARD.getGameBoard()) != 0){
                 break;
             }
             System.out.println("\n Another player makes turn \n");
             makeTurn(Cell.O);
-            gameField.printField();
+            BOARD.printBoard();
         }
+        BOARD_STATE.printWin(BOARD_STATE.checkWin(BOARD.getGameBoard()));
     }
 
     private void playAgainstAI() {
         AI ai = new AI();
-        gameField.initialiseField();
-        gameField.printField();
-        while (!gameField.checkWin()) {
+        BOARD.printBoard();
+        while (BOARD_STATE.checkWin(BOARD.getGameBoard()) == 0) {
             makeTurn(Cell.X);
-            if (gameField.checkWin()){
+            if (BOARD_STATE.checkWin(BOARD.getGameBoard()) != 0){
                 break;
             }
             System.out.println("\n AI makes turn \n");
-            ai.makeTurn(gameField.getGameField());
-            gameField.printField();
+            ai.makeTurn(BOARD.getGameBoard());
+            BOARD.printBoard();
         }
+        BOARD_STATE.printWin(BOARD_STATE.checkWin(BOARD.getGameBoard()));
     }
 
     private void makeTurn(Cell value) {
@@ -53,9 +55,9 @@ public class Model {
             System.out.println("Enter the coordinates of your next Turn (X and Y)");
             x = SCANNER.nextInt();
             y = SCANNER.nextInt();
-        } while (!gameField.isValidCell(x, y));
-        gameField.setFieldValue(x, y, value);
-        gameField.printField();
+        } while (!BOARD.isValidCell(x, y));
+        BOARD.setBoardValue(x, y, value);
+        BOARD.printBoard();
     }
 
 }
