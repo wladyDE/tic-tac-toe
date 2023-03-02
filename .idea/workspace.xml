@@ -4,41 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a81a76a-987c-4848-8b77-a316dbf1a78b" name="Changes" comment="fix Model">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/console/GameNotificationConsole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/console/UserInputScanner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/console/exception/BadGameOpponentValueException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/console/validation/ConsoleInputValidation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/console/validation/impl/CoordinatesInputValidation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/console/validation/impl/GameOpponentInputValidation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/GameContext.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/AI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/GameModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/GameOpponent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/PlayerTurn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/board/Board.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/board/BoardState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/board/BoardStateResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/model/board/Cell.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/player/AiPlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/player/GamePlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/player/Player.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/tictactoe/example/game/player/PlayerFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/console/UserInputScannerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/game/model/GameModelTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/game/player/AiPlayerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/game/util/Acceptable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
+    <list default="true" id="0a81a76a-987c-4848-8b77-a316dbf1a78b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/console/GameNotificationConsoleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/model/board/BoardStateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/player/PlayerFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/player/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BoardState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/com/tictactoe/example/console/UserInputScannerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/console/UserInputScannerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/player/AiPlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/player/AiPlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/console/UserInputScannerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/console/UserInputScannerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/game/player/AiPlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/tictactoe/example/game/player/AiPlayerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,42 +83,13 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tictactoe.example.console" />
+      <recent name="com.tictactoe.example.game.model.board" />
       <recent name="com.tictactoe.example.game.player" />
       <recent name="com.tictoe.example.console" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AiPlayerTest.shouldReturnExpectedBoardStateResultAfter">
-    <configuration name="AiPlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tic-Tac-Toe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
-      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.AiPlayerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AiPlayerTest.shouldReturnExpectedBoardStateResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tic-Tac-Toe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
-      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.AiPlayerTest" />
-      <option name="METHOD_NAME" value="shouldReturnExpectedBoardStateResult" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.GameNotificationConsoleTest.shouldSendMessage">
     <configuration name="AiPlayerTest.shouldReturnExpectedBoardStateResultAfter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tic-Tac-Toe" />
       <extension name="coverage">
@@ -160,7 +106,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserInputScannerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameNotificationConsoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tic-Tac-Toe" />
       <extension name="coverage">
         <pattern>
@@ -168,14 +114,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.tictoe.example.console" />
-      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.console.UserInputScannerTest" />
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.console" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.console.GameNotificationConsoleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserInputScannerTest.shouldReturnExpectedPlayerTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameNotificationConsoleTest.shouldSendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tic-Tac-Toe" />
       <extension name="coverage">
         <pattern>
@@ -183,9 +129,41 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.tictoe.example.console" />
-      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.console.UserInputScannerTest" />
-      <option name="METHOD_NAME" value="shouldReturnExpectedPlayerTurn" />
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.console" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.console.GameNotificationConsoleTest" />
+      <option name="METHOD_NAME" value="shouldSendMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.shouldReturnExpectedBoardStateResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.PlayerTest" />
+      <option name="METHOD_NAME" value="shouldReturnExpectedBoardStateResult" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest.shouldReturnExpectedBoardStateResultAfterTwoTurns" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.PlayerTest" />
+      <option name="METHOD_NAME" value="shouldReturnExpectedBoardStateResultAfterTwoTurns" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameNotificationConsoleTest.shouldSendMessage" />
+        <item itemvalue="JUnit.GameNotificationConsoleTest" />
         <item itemvalue="JUnit.AiPlayerTest.shouldReturnExpectedBoardStateResultAfter" />
-        <item itemvalue="JUnit.UserInputScannerTest.shouldReturnExpectedPlayerTurn" />
-        <item itemvalue="JUnit.AiPlayerTest" />
-        <item itemvalue="JUnit.AiPlayerTest.shouldReturnExpectedBoardStateResult" />
-        <item itemvalue="JUnit.UserInputScannerTest" />
+        <item itemvalue="JUnit.PlayerTest.shouldReturnExpectedBoardStateResultAfterTwoTurns" />
+        <item itemvalue="JUnit.PlayerTest.shouldReturnExpectedBoardStateResult" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +212,8 @@
       <workItem from="1677602416244" duration="2505000" />
       <workItem from="1677655335233" duration="3731000" />
       <workItem from="1677674827592" duration="16172000" />
-      <workItem from="1677740233430" duration="3813000" />
+      <workItem from="1677740233430" duration="12633000" />
+      <workItem from="1677766688625" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1676883135492</created>
@@ -271,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677740400030</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="solid">
+      <created>1677746729994</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677746729994</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +284,11 @@
           <url>file://$PROJECT_DIR$/src/main/com/tictactoe/example/console/UserInputScanner.java</url>
           <line>82</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/com/tictactoe/example/game/player/PlayerFactory.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

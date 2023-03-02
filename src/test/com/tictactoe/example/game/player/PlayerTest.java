@@ -3,7 +3,6 @@ package com.tictactoe.example.game.player;
 import com.tictactoe.example.console.GameNotificationConsole;
 import com.tictactoe.example.console.UserInputScanner;
 import com.tictactoe.example.game.GameContext;
-import com.tictactoe.example.game.model.AI;
 import com.tictactoe.example.game.model.PlayerTurn;
 import com.tictactoe.example.game.model.board.Board;
 import com.tictactoe.example.game.model.board.BoardState;
@@ -25,9 +24,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
-class AiPlayerTest {
-    private final static BoardStateResult EXPECTED_BOARD_STATE_RESULT = BoardStateResult.PLAYER_1_WON;
-
+class PlayerTest {
     @Mock
     private GameContext gameContext;
     @Mock
@@ -35,51 +32,52 @@ class AiPlayerTest {
     @Mock
     private BoardState boardState;
     @Mock
-    private GameNotificationConsole gameNotificationConsole;
-    @Mock
     private UserInputScanner userInputScanner;
     @Mock
-    private PlayerTurn playerTurn;
+    private GameNotificationConsole gameNotificationConsole;
     @Mock
-    private AI ai;
+    private PlayerTurn playerTurn;
 
-    private AiPlayer aiPlayer;
+    private GamePlayer player;
 
     @BeforeEach
     void setUp() {
-        when(boardState.getCurrentBoardStateResult(board)).thenReturn(BoardStateResult.PLAYER_1_WON);
+        doNothing().when(gameNotificationConsole).sendMessage(anyString());
 
         doNothing().when(board).printBoard(gameNotificationConsole);
+        /*2 times? any? */
         doNothing().when(board).setBoardValue(playerTurn, Cell.O);
         doNothing().when(board).setBoardValue(playerTurn, Cell.X);
         when(userInputScanner.getPlayerTurn(any(GameContext.class))).thenReturn(playerTurn);
+        when(gameContext.getGameNotificationConsole()).thenReturn(gameNotificationConsole);
         when(gameContext.getUserInputScanner()).thenReturn(userInputScanner);
 
-        when(gameContext.getGameNotificationConsole()).thenReturn(gameNotificationConsole);
         when(gameContext.getBoardState()).thenReturn(boardState);
         when(gameContext.getBoard()).thenReturn(board);
 
-        aiPlayer = new AiPlayer();
+        player = new Player();
     }
 
     @Test
     public void shouldReturnExpectedBoardStateResult() {
-            BoardStateResult actualBoardStateResult = aiPlayer.play(gameContext);
+        when(boardState.getCurrentBoardStateResult(board)).thenReturn(BoardStateResult.PLAYER_1_WON);
+        final BoardStateResult expectedBoardStateResult = BoardStateResult.PLAYER_1_WON;
 
-            assertEquals(EXPECTED_BOARD_STATE_RESULT, actualBoardStateResult, "Should be equal!");
+        BoardStateResult actualBoardStateResult = player.play(gameContext);
+
+        assertEquals(expectedBoardStateResult, actualBoardStateResult, "Should be equal!");
     }
 
     @Test
-    public void shouldReturnExpectedBoardStateResultAfter() {
+    public void shouldReturnExpectedBoardStateResultAfterTwoTurns() {
         when(boardState.getCurrentBoardStateResult(board))
                 .thenReturn(BoardStateResult.CONTINUE)
                 .thenReturn(BoardStateResult.CONTINUE)
                 .thenReturn(BoardStateResult.PLAYER_1_WON);
-        doNothing().when(gameNotificationConsole).sendMessage(anyString());
-        doNothing().when(ai).makeTurn(board.getGameBoard());
+        final BoardStateResult expectedBoardStateResult = BoardStateResult.PLAYER_1_WON;
 
-        BoardStateResult actualBoardStateResult = aiPlayer.play(gameContext);
+        BoardStateResult actualBoardStateResult = player.play(gameContext);
 
-        assertEquals(EXPECTED_BOARD_STATE_RESULT, actualBoardStateResult, "Should be equal!");
+        assertEquals(expectedBoardStateResult, actualBoardStateResult, "Should be equal!");
     }
 }
