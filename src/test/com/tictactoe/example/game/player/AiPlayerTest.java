@@ -76,7 +76,8 @@ class AiPlayerTest {
                 .thenReturn(BoardStateResult.PLAYER_1_WON);
         doNothing().when(gameNotificationConsole).sendMessage(anyString());
         when(board.getGameBoard()).thenReturn(null);
-        doNothing().when(ai).makeTurn(board.getGameBoard());
+        doNothing().when(ai).makeTurn(any());
+
         when(boardState.getCurrentBoardStateResult(board))
                 .thenReturn(BoardStateResult.CONTINUE)
                 .thenReturn(BoardStateResult.CONTINUE);

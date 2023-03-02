@@ -52,7 +52,6 @@ class UserInputScannerTest {
 
     @BeforeEach
     void setUp() {
-        when(coordinatesInputValidation.isValidInput(eq(anyString()), gameContext)).thenReturn(true);
         when(board.isValidCell(any(Integer.class), any(Integer.class))).thenReturn(true);
         when(scanner.next()).thenReturn(EXPECTED_COORDINATE);
         when(gameContext.getBoard()).thenReturn(board);
