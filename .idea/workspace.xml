@@ -4,24 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a81a76a-987c-4848-8b77-a316dbf1a78b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BoardState.java" afterDir="false" />
+    <list default="true" id="0a81a76a-987c-4848-8b77-a316dbf1a78b" name="Changes" comment="fix Model">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/console/UserInputScannerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/model/GameModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/tictactoe/example/game/player/AiPlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tic-Tac-Toe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tic-Tac-Toe.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -44,32 +69,128 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "C:/Users/vhavryliuk/IdeaProjects/My Projects/SpringBoot/library",
+    "last_opened_file_path": "C:/Users/vhavryliuk/Downloads/objenesis-3.3.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe" />
+      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe\src\test\com\tictoe\example\game\model" />
+      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe\src\main" />
+      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe\src" />
+      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe\out" />
+      <recent name="C:\Users\vhavryliuk\IdeaProjects\Quinscape\Tic-Tac-Toe\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tictactoe.example.game.player" />
+      <recent name="com.tictoe.example.console" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.UserInputScannerTest.shouldReturnExpectedPlayerTurn">
+    <configuration name="AiPlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.AiPlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AiPlayerTest.shouldReturnExpectedBoardStateResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.AiPlayerTest" />
+      <option name="METHOD_NAME" value="shouldReturnExpectedBoardStateResult" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AiPlayerTest.shouldReturnExpectedBoardStateResultAfter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.game.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictactoe.example.game.player" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.game.player.AiPlayerTest" />
+      <option name="METHOD_NAME" value="shouldReturnExpectedBoardStateResultAfter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserInputScannerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.console.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictoe.example.console" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.console.UserInputScannerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserInputScannerTest.shouldReturnExpectedPlayerTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tic-Tac-Toe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tictactoe.example.console.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tictoe.example.console" />
+      <option name="MAIN_CLASS_NAME" value="com.tictactoe.example.console.UserInputScannerTest" />
+      <option name="METHOD_NAME" value="shouldReturnExpectedPlayerTurn" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserInputScannerTest.shouldReturnExpectedPlayerTurn" />
+        <item itemvalue="JUnit.AiPlayerTest.shouldReturnExpectedBoardStateResultAfter" />
+        <item itemvalue="JUnit.AiPlayerTest" />
+        <item itemvalue="JUnit.AiPlayerTest.shouldReturnExpectedBoardStateResult" />
+        <item itemvalue="JUnit.UserInputScannerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +214,19 @@
       <workItem from="1677136794307" duration="22000" />
       <workItem from="1677140443238" duration="1542000" />
       <workItem from="1677155967170" duration="1330000" />
-      <workItem from="1677232948960" duration="11341000" />
+      <workItem from="1677232948960" duration="12080000" />
+      <workItem from="1677246632518" duration="1238000" />
+      <workItem from="1677302787956" duration="33000" />
+      <workItem from="1677419776012" duration="618000" />
+      <workItem from="1677428914331" duration="1214000" />
+      <workItem from="1677487861528" duration="2834000" />
+      <workItem from="1677511780895" duration="2946000" />
+      <workItem from="1677591701932" duration="1604000" />
+      <workItem from="1677593315222" duration="2968000" />
+      <workItem from="1677596295442" duration="3482000" />
+      <workItem from="1677602416244" duration="2505000" />
+      <workItem from="1677655335233" duration="3731000" />
+      <workItem from="1677674827592" duration="16172000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1676883135492</created>
@@ -116,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677007668996</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="improve AI and Board">
+      <created>1677245681084</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677245681084</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +266,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="first version" />
     <MESSAGE value="improve game field" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve game field" />
+    <MESSAGE value="improve AI and Board" />
+    <MESSAGE value="fix Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Model" />
   </component>
 </project>

@@ -1,14 +1,21 @@
+package com.tictactoe.example.game.model;
+
+import com.tictactoe.example.game.model.board.Cell;
+
 public class AI {
     public void makeTurn(Cell[][] gameField) {
         if (gameField[1][1] != Cell.EMPTY) {
             Cell[][] tempBoard = copyBoard(gameField);
             checkBoard(gameField, Cell.O); // check if O can win
+
             if (compareBoards(gameField, tempBoard)) {
                 Cell[][] tempBoard2 = copyBoard(gameField);
                 checkBoard(gameField, Cell.X);  // check if X can win and stop it
+
                 if (compareBoards(gameField, tempBoard2)) {
                     Cell[][] tempBoard3 = copyBoard(gameField);
                     setCorner(gameField);      // if threat does not exist -> take corner
+
                     if (compareBoards(tempBoard3, gameField)) {
                         for (int j = 0; j < 3; j++) {
                             for (int i = 0; i < 3; i++) {
