@@ -18,8 +18,7 @@ import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
@@ -27,6 +26,8 @@ import static org.mockito.Mockito.when;
 @MockitoSettings(strictness = Strictness.LENIENT)
 class AiPlayerTest {
     private final static BoardStateResult EXPECTED_BOARD_STATE_RESULT = BoardStateResult.PLAYER_1_WON;
+    private final static Cell[][] GAME_BOARD_CELLS = new Cell[][] {{ Cell.O, Cell.X }};
+    private final static PlayerTurn PLAYER_TURN = new PlayerTurn(1,1);
 
     @Mock
     private GameContext gameContext;
@@ -39,8 +40,6 @@ class AiPlayerTest {
     @Mock
     private UserInputScanner userInputScanner;
     @Mock
-    private PlayerTurn playerTurn;
-    @Mock
     private AI ai;
 
     private AiPlayer aiPlayer;
@@ -50,16 +49,16 @@ class AiPlayerTest {
         when(boardState.getCurrentBoardStateResult(board)).thenReturn(BoardStateResult.PLAYER_1_WON);
 
         doNothing().when(board).printBoard(gameNotificationConsole);
-        doNothing().when(board).setBoardValue(playerTurn, Cell.O);
-        doNothing().when(board).setBoardValue(playerTurn, Cell.X);
-        when(userInputScanner.getPlayerTurn(any(GameContext.class))).thenReturn(playerTurn);
+        doNothing().when(board).setBoardValue(any(PlayerTurn.class), any(Cell.class));
+        when(board.getGameBoard()).thenReturn(GAME_BOARD_CELLS);
+        when(userInputScanner.getPlayerTurn(any(GameContext.class))).thenReturn(PLAYER_TURN);
         when(gameContext.getUserInputScanner()).thenReturn(userInputScanner);
 
         when(gameContext.getGameNotificationConsole()).thenReturn(gameNotificationConsole);
         when(gameContext.getBoardState()).thenReturn(boardState);
         when(gameContext.getBoard()).thenReturn(board);
 
-        aiPlayer = new AiPlayer();
+        aiPlayer = new AiPlayer(ai);
     }
 
     @Test
@@ -76,7 +75,7 @@ class AiPlayerTest {
                 .thenReturn(BoardStateResult.CONTINUE)
                 .thenReturn(BoardStateResult.PLAYER_1_WON);
         doNothing().when(gameNotificationConsole).sendMessage(anyString());
-        doNothing().when(ai).makeTurn(board.getGameBoard());
+        doNothing().when(ai).makeTurn(eq(GAME_BOARD_CELLS));
 
         BoardStateResult actualBoardStateResult = aiPlayer.play(gameContext);
 

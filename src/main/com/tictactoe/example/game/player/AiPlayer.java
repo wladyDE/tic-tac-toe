@@ -9,10 +9,18 @@ import com.tictactoe.example.game.model.board.Board;
 import com.tictactoe.example.game.model.board.BoardStateResult;
 
 public class AiPlayer extends GamePlayer {
+    private final AI ai;
+
+    public AiPlayer() {
+        this.ai = new AI();
+    }
+
+    public AiPlayer(AI ai) {
+        this.ai = ai;
+    }
 
     @Override
     public BoardStateResult play(GameContext gameContext) {
-        AI ai = new AI();
         Board board = gameContext.getBoard();
         BoardState boardState = gameContext.getBoardState();
         BoardStateResult currentBoardStateResult = BoardStateResult.CONTINUE;

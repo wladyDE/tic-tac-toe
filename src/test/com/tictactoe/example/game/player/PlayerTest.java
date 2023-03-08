@@ -45,7 +45,6 @@ class PlayerTest {
         doNothing().when(gameNotificationConsole).sendMessage(anyString());
 
         doNothing().when(board).printBoard(gameNotificationConsole);
-        /*2 times? any? */
         doNothing().when(board).setBoardValue(playerTurn, Cell.O);
         doNothing().when(board).setBoardValue(playerTurn, Cell.X);
         when(userInputScanner.getPlayerTurn(any(GameContext.class))).thenReturn(playerTurn);

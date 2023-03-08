@@ -52,8 +52,6 @@ class UserInputScannerTest {
 
     @BeforeEach
     void setUp() {
-        when(coordinatesInputValidation.isValidInput(eq(anyString()), gameContext)).thenReturn(true);
-        when(board.isValidCell(any(Integer.class), any(Integer.class))).thenReturn(true);
         when(scanner.next()).thenReturn(EXPECTED_COORDINATE);
         when(gameContext.getBoard()).thenReturn(board);
 
@@ -170,6 +168,9 @@ class UserInputScannerTest {
 
     @Test
     public void shouldReturnExpectedPlayerTurn() {
+        when(coordinatesInputValidation.isValidInput(anyString(), any(GameContext.class))).thenReturn(true);
+        when(board.isValidCell(any(Integer.class), any(Integer.class))).thenReturn(true);
+
         PlayerTurn actualPlayerTurn = userInputScanner.getPlayerTurn(gameContext);
 
         assertAll(
@@ -177,4 +178,51 @@ class UserInputScannerTest {
                 () -> assertEquals(EXPECTED_PLAYER_TURN.getY(), actualPlayerTurn.getY(), "Should be equal!")
         );
     }
+
+    @Test
+    public void shouldReturnExpectedPlayerTurnAfterIncorrectInput() {
+        when(board.isValidCell(any(Integer.class), any(Integer.class))).thenReturn(true);
+        when(coordinatesInputValidation.isValidInput(anyString(), any(GameContext.class)))
+                .thenReturn(false)
+                .thenReturn(true);
+
+        PlayerTurn actualPlayerTurn = userInputScanner.getPlayerTurn(gameContext);
+
+        assertAll(
+                () -> assertEquals(EXPECTED_PLAYER_TURN.getX(), actualPlayerTurn.getX(), "Should be equal!"),
+                () -> assertEquals(EXPECTED_PLAYER_TURN.getY(), actualPlayerTurn.getY(), "Should be equal!")
+        );
+    }
+
+    @Test
+    public void shouldNotifyUserExpectedTimesAfterUserIncorrectInputCoordinates() {
+        final String expectedMessage = "Your coordinates are incorrect!";
+
+        when(board.isValidCell(any(Integer.class), any(Integer.class))).thenReturn(true);
+        when(coordinatesInputValidation.isValidInput(anyString(), any(GameContext.class)))
+                .thenReturn(false)
+                .thenReturn(false)
+                .thenReturn(true);
+
+        PlayerTurn actualPlayerTurn = userInputScanner.getPlayerTurn(gameContext);
+
+        verify(gameNotificationConsole, times(2)).sendMessage(expectedMessage);
+    }
+
+    @Test
+    public void shouldNotifyUserExpectedTimesWhenInValidCell() {
+        final String expectedMessage = "Your coordinates are incorrect!";
+
+        when(board.isValidCell(any(Integer.class), any(Integer.class)))
+                .thenReturn(false)
+                .thenReturn(false)
+                .thenReturn(true);
+        when(coordinatesInputValidation.isValidInput(anyString(), any(GameContext.class))).thenReturn(true);
+
+        PlayerTurn actualPlayerTurn = userInputScanner.getPlayerTurn(gameContext);
+
+        verify(gameNotificationConsole, times(2)).sendMessage(expectedMessage);
+    }
+
+
 }
