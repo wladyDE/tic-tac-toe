@@ -1,3 +1,1 @@
-The project was developed in Java, utilizing SOLID principles and the Factory design pattern.
-
-# tic-tac-toe
+A Tic-Tac-Toe game implemented in Java, following SOLID principles, applying the Factory design pattern, and covered with unit tests for reliable behavior.
